@@ -1,5 +1,5 @@
 from pywinauto import Desktop, Application, ElementNotFoundError
-from pywinauto.findwindows import ElementNotFoundError
+from pywinauto.findwindows import ElementNotFoundError, enum_windows
 from robot.api.deco import keyword
 from robot.api import logger
 from subprocess import call
@@ -10,6 +10,9 @@ def startCalcDialog() -> Application():
     "This method just returns a Calculator dialog"
     app = Application(backend='uia').start('calc.exe')
     # needed since the application spaws additional processes
+    # windows = Desktop(backend='uia').windows()
+    # for w in windows:
+    #     print(w.window_text())
     return Desktop(backend='uia').Calculator 
 
 @keyword("Push Num Button")
@@ -42,3 +45,4 @@ def kill_all_calcs():
 # num_button_pusher(Calcdlg, 5)
 # num_button_pusher(Calcdlg, 100)
 
+startCalcDialog()

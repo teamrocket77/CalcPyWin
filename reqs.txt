@@ -14,7 +14,7 @@ pylint==2.4.4
 Pypubsub==4.0.3
 pywin32==300
 pywinauto==0.6.8
-robotframework @ file:///home/conda/feedstock_root/build_artifacts/robotframework_1615473499328/work/dist
+robotframework==4.0
 robotframework-ride==2.0b1
 six==1.15.0
 virtualenv==20.0.25
